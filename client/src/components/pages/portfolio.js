@@ -4,8 +4,6 @@ import API from '../../utils/api';
 import * as moment from 'moment';
 import '../../css/watchlist.css'
 import search1 from '../../utils/stockApi4';
-import search2 from '../../utils/stockApi5';
-import search3 from '../../utils/stockApi6';
 import Stockdiv from '../stockdiv';
 
 //needed for api
@@ -51,7 +49,7 @@ class Portfolio extends Component{
         console.log(searchValue);
         search1.search(searchValue).then(res => {
             const dailySeries = "$"+res.data["Time Series (Daily)"][todaysdate]['4. close'];
-            if (dailySeries != undefined){
+            if (dailySeries !== undefined){
             
             console.log(dailySeries);
             this.setState({
