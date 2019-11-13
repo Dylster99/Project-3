@@ -119,7 +119,7 @@ class Search extends Component{
         } else {
           this.setState({updownW: "down"})
         }
-        if (dailySeries != undefined){
+        if (dailySeries !== undefined){
 
           this.setState({ price: res.data["Time Series (Daily)"][todaysdate]["4. close"],
           volume: res.data["Time Series (Daily)"][todaysdate]["6. volume"],
